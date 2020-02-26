@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="aprendendo-groovy.main" target="1.8" />
+      <module name="aprendendo-groovy.test" target="1.8" />
+      <module name="processador-.main" target="1.8" />
+      <module name="processador-.test" target="1.8" />
+      <module name="processador-de-resul.main" target="1.8" />
+      <module name="processador-de-resul.test" target="1.8" />
+      <module name="processador-de-resultados-.main" target="1.8" />
+      <module name="processador-de-resultados-.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
