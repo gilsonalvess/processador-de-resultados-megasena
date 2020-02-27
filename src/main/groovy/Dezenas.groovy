@@ -16,8 +16,12 @@ class Dezenas {
         this.dezena06 = dezenas.get(5)
     }
 
+    List<String> toList() {
+        return this.toString().tokenize('-')
+    }
+
     @Override
-    public String toString() {
+    String toString() {
         return "$dezena01-$dezena02-$dezena03-$dezena04-$dezena05-$dezena06"
     }
 }

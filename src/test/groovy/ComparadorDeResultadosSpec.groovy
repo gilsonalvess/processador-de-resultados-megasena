@@ -11,6 +11,8 @@ class ComparadorDeResultadosSpec extends Specification {
         List<String> numerosQueSeRepetiram = comparadorDeResultados.obtenhaNumerosQueSeRepetiram(montadorDeResultados.obtenhaTodosResultados())
 
         then:
-        numerosQueSeRepetiram
+        numerosQueSeRepetiram.sort().get(05) == 'Dezena: 06 - Vezes que se repetiu: 3'
+        numerosQueSeRepetiram.sort().get(10) == 'Dezena: 11 - Vezes que se repetiu: 1'
+        numerosQueSeRepetiram.sort().get(31) == 'Dezena: 32 - Vezes que se repetiu: 4'
     }
 }
