@@ -1,8 +1,10 @@
-class DezenasEmJogo {
+package br.com.apostacerta.megasena
+
+class DezenasParaJogo {
     String dezena
     Integer qtdRepeticoes
 
-    DezenasEmJogo(String dezena, Integer qtdRepeticoes) {
+    DezenasParaJogo(String dezena, Integer qtdRepeticoes) {
         this.dezena = dezena
         this.qtdRepeticoes = qtdRepeticoes
     }

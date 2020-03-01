@@ -1,28 +1,41 @@
+import br.com.apostacerta.megasena.MontadorDeResultados
+import br.com.apostacerta.megasena.Resultado
 import spock.lang.Specification
 
 class MontadorDeResultadosSpec extends Specification {
 
-    void 'obtenhaTodosResultados'() {
+    void 'obtenhaTodosResultadosMegaSena'() {
         setup:
         MontadorDeResultados montadorDeResultados = new MontadorDeResultados()
 
         when:
-        List<Resultado> resultados = montadorDeResultados.obtenhaTodosResultados()
+        List<Resultado> resultados = montadorDeResultados.obtenhaTodosResultados('resultados_megasena.txt')
 
         then:
-        assert 12, resultados.size()
+        resultados.size() == 12
     }
 
-    void 'obtenhaResultadoConurso'() {
+    void 'obtenhaTodosResultadosLotoFacil'() {
         setup:
         MontadorDeResultados montadorDeResultados = new MontadorDeResultados()
 
         when:
-        Resultado resultado = montadorDeResultados.resultadoConcurso('2236')
+        List<Resultado> resultados = montadorDeResultados.obtenhaTodosResultados('resultados_lotofacil.txt')
 
         then:
-        assert '07-20-38-43-45-53', resultado.toString()
+        resultados.size() == 10
+    }
+
+    void 'obtenhaResultadoConursoMegaSena'() {
+        setup:
+        MontadorDeResultados montadorDeResultados = new MontadorDeResultados()
+
+        when:
+        Resultado resultado = montadorDeResultados.resultadoConcurso('2236', 'resultados_megasena.txt')
+
         then:
-        assert '22/02/2020', resultado.concurso.data
+        '07-20-38-43-45-53' == resultado.dezenas.toString()
+        then:
+        '22/02/2020' == resultado.concurso.data
     }
 }

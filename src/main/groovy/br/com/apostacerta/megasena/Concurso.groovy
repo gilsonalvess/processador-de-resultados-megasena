@@ -1,3 +1,5 @@
+package br.com.apostacerta.megasena
+
 import java.time.LocalDate
 
 class Concurso {

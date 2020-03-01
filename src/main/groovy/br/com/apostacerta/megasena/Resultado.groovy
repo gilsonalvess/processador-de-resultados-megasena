@@ -1,3 +1,5 @@
+package br.com.apostacerta.megasena
+
 class Resultado {
     Dezenas dezenas
     Concurso concurso
