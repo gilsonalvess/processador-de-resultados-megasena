@@ -12,7 +12,7 @@ class ComparadorDeRepeticoes {
         return resultadoRepeticoes
     }
 
-    List<DezenasParaJogo> obtenhaDezenasQueSeRepetiram(List<Resultado> resultados, String loteria = null) {
+    List<DezenasParaJogo> obtenhaRepeticoesDezenas(List<Resultado> resultados, String loteria = null) {
         List<DezenasParaJogo> resultadoRepeticoes = processeRepeticoesDasDezenas(resultados, loteria)
         return resultadoRepeticoes
     }

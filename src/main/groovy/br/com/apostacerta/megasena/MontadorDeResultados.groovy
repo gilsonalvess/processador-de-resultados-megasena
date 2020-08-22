@@ -2,7 +2,7 @@ package br.com.apostacerta.megasena
 
 class MontadorDeResultados {
 
-    private static String REGEX_RESULTADO = '(?m)Concurso\\s(\\d+)\\s\\(de\\s(\\d{2}\\/\\d{2}\\/\\d{4}).\\n\\|(.*)\\|'
+    private static String REGEX_RESULTADO = '(?m)^([^\\|]+)\\|([^\\|]+)\\|([^\\|]+)'
 
     List<Resultado> obtenhaTodosResultados(String fileName) {
         List<Resultado> resultados = obtenhaConteudoResultado(fileName).findAll(REGEX_RESULTADO) { String linha, String numeroConcurso, String data, String dezenas ->

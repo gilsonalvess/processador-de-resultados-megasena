@@ -12,7 +12,7 @@ class ComparadorDeRepeticoesSpec extends Specification {
 
         when:
         List<Resultado> resultados = montadorDeResultados.obtenhaTodosResultados('resultados_megasena.txt')
-        List<String> numerosQueSeRepetiram = comparadorDeResultados.obtenhaDezenasQueSeRepetiramString(resultados)
+        List<String> numerosQueSeRepetiram = comparadorDeResultados.obtenhaDezenasQueSeRepetiramString(resultados, 'megasena')
 
         then:
         numerosQueSeRepetiram.sort().get(05) == 'Dezena: 06 - Vezes que se repetiu: 3'
